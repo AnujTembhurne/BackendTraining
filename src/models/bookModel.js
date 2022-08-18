@@ -28,7 +28,7 @@ const mongoose = require('mongoose');
 
 const newbookSchema=new mongoose.Schema({
     name:String,
-        author_id:Number,
+        author_id:{type:Number,require:true},
         price:Number,
         ratings:Number,
 
