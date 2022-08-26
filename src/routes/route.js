@@ -3,6 +3,8 @@ const router = express.Router();
 // const UserModel= require("../models/userModel.js")
 const UserController= require("../controllers/userController")
 const BookController= require("../controllers/bookController")
+const ProductController=require("../controllers/productController")
+const OrderController=require("../controllers/orderController")
 const commonMW = require ("../middlewares/commonMiddlewares")
 
 router.get("/test-me", function (req, res) {
@@ -10,14 +12,15 @@ router.get("/test-me", function (req, res) {
 })
 
 
-
-
+router.post("/createProduct",ProductController.createProduct)
+router.post("/createUser",commonMW.mid3, UserController.createUser)
+router.post("/createOrder",commonMW.mid5,OrderController.createOrder)
 router.post("/createBook", BookController.createBook  )
 
 
 
 
-router.post("/createUser", UserController.createUser)
+
 // router.get("/getUsersData", UserController.getUsersData)
 
 
