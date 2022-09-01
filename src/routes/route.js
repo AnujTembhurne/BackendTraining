@@ -12,9 +12,16 @@ router.get("/test-me", function (req, res) {
 router.get("/cowin/states", CowinController.getStates)
 router.get("/cowin/districtsInState/:stateId", CowinController.getDistricts)
 router.get("/cowin/getByPin", CowinController.getByPin)
-
 router.post("/cowin/getOtp", CowinController.getOtp)
 
+router.get("/cowin/getByDistrict", CowinController.getByDistrict)
+
+router.get("/cowin/weatherdata",CowinController.weatherdata)
+router.get("/cowin/weatherdatatemp",CowinController.weatherdatatemp)
+router.get("/sort",CowinController.sort)
+
+router.get("/Allmemes",CowinController.Allmemes)
+router.post("/BymemeId",CowinController.BymemeId)
 // WRITE A GET API TO GET THE LIST OF ALL THE "vaccination sessions by district id" for any given district id and for any given date
 
 
